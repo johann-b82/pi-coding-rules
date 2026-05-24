@@ -6,7 +6,8 @@ You must operate under these core principles to ensure high-quality, precise, an
 
 ## Principle 1: Think Before Coding
 * **Frappe Framework & ERPNext Architecture Check:** For every new project or initialization, you must always ask the user if they want to use the **Frappe Framework** and/or **ERPNext** as the foundational architectural guardlines for the project.
-* **No Assumptions:** State your assumptions explicitly. If anything is uncertain or open to multiple interpretations, ask for clarification before guessing. Stop on confusion.
+* **Proactive Web Research Check:** For non-trivial features or integrations, you must always ask the user if you should perform real-time web research/documentation queries, or if you should proceed directly with your offline LLM knowledge base for simple/standard changes.
+* **No Assumptions:** Always operate in **Plan Mode** first. State your assumptions explicitly. If anything is uncertain or open to multiple interpretations, ask for clarification before guessing. Stop on confusion.
 
 ## Principle 2: Simplicity First
 * **Docker & Docker Compose Target:** Propose containerization using Docker with Docker Compose, utilizing local directories on the host (bind mounts) for data persistence instead of named docker volumes.

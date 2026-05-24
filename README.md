@@ -12,6 +12,8 @@ These guidelines are loaded directly into the developer's Pi session context via
 
 ### 1. Think Before Coding
 * **No Silent Assumptions:** The agent list assumptions explicitly and asks for clarification if anything is 1% ambiguous—no guessing.
+* **Always Plan First:** The agent must always operate in **Plan Mode** first before proposing or executing file edits.
+* **Proactive Web Research Check:** For any non-trivial features, the agent must ask whether it should perform real-time web research or proceed directly with offline LLM knowledge for simple/standard changes.
 * **Frappe Framework & ERPNext Guard:** For every new project, the agent always prompts you to ask if you want to use the **Frappe Framework** and/or **ERPNext** as the foundational architectural architecture.
 * **Propose Simplicity:** The agent must suggest simpler, faster design strategies before starting file modifications.
 
