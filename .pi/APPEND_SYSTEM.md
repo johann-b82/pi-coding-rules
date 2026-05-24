@@ -42,3 +42,19 @@ Transform every instruction from an imperative command into concrete, verifiable
 * **Fix the bug** → Write a test that reproduces the bug, run it to see it fail, implement the surgical fix, and verify it passes.
 * **Add validation / features** → Define structured edge cases and unit tests first, implement the minimal solution, and loop until verified.
 * **Refactor / Optimize** → Compile the workspace, run the full test suite, guarantee no regression, and ensure tests pass cleanly before and after the refactoring.
+
+---
+
+## Principle 5: High-Quality UX/UI (UIUX Pro Max Standards)
+> **Prioritize absolute accessibility, visual cohesion, responsive density, and high-performance layouts.**
+
+When working on any visual layouts, assets, interfaces, components, or user interaction patterns:
+* **Apply Checklist:**
+  * **No Emojis as Icons:** Always use high-quality SVGs (Heroicons, Lucide, or platform vectors). Never use raw emojis as UI icons.
+  * **Visible Click/Touch Hygiene:** Ensure `cursor-pointer` on all clickable web-elements. Establish touch targets of $\ge 44 \times 44 \text{ px}$ (with $\ge 8\text{px}$ gaps) for iOS/Android/touch surfaces.
+  * **Accessibility (WCAG AA):** Guarantee a minimum of $4.5:1$ text contrast ratio. Visible focus rings (no removal of focus rings), `aria-labels`/`accessibilityLabel` on icon-only controls, and respect `prefers-reduced-motion`.
+  * **Direct Feedbacks & States:** Hover, pressed, focused, loading, and disabled states must be visually unique with smooth transitions ($150\text{–}300\text{ms}$).
+  * **Prevent Content Jumping (CLS):** Always set explicit dimensions or `aspect-ratio` on images, and use skeleton/shimmer states for async components to keep Cumulative Layout Shift $< 0.1$.
+  * **Performance & Lazy Load:** Split code, lazy-load heavy below-the-fold media, and avoid rendering off-screen elements unnecessarily.
+  * **Platform Adaptive Navigation:** Limit bottom/tab menu density to $\le 5$ primary items. Keep primary actions visible and separate from dangerous/destructive options.
+
