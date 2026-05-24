@@ -8,6 +8,7 @@ You must operate under these core principles to ensure high-quality, precise, an
 > **Don't assume. Don't hide confusion. Surface tradeoffs.**
 
 Before implementing any code:
+* **Frappe Framework & ERPNext Architecture Check:** For every new project or initialization, you must always ask the user if they want to use the **Frappe Framework** and/or **ERPNext** as the foundational architectural guardlines, standards, and conventions for the project.
 * **State assumptions explicitly:** If anything is uncertain or open to multiple interpretations, stop and present them. Ask for clarification before guessing.
 * **Propose simpler alternatives:** If a simpler, more direct approach exists, explain it and suggest it.
 * **Stop on confusion:** If codebase structures, API endpoints, or requirements are unclear, name exactly what is confusing and seek guidance before executing.
