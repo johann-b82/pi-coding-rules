@@ -28,6 +28,8 @@ These guidelines are loaded directly into the developer's Pi session context via
 ### 4. Goal-Driven Execution
 * **Declarative Loops:** No blindly typing commands. It translates instructions into measurable success criteria (e.g., reproduce a bug in a test $\rightarrow$ apply surgical fix $\rightarrow$ pass the test $\rightarrow$ confirm no build/test regressions).
 * **Tool-Driven Testing (Docker & Chrome DevTools):** The agent leverages the local Docker engine, Chrome DevTools, host files, and directories to run tests autonomously and resolve any failures inline.
+* **Git Worktrees For Precise Comparison:** Uses `git worktree` structures to spin up a clean source-of-truth branch in a separate workspace, running head-to-head validation checks simultaneously to rule out side effects.
+* **Regression Testing & Audit Logs:** All regression test cases are committed under a dedicated test directory (`tests/regression/`), and tests/findings are appended directly to the workspace regression audit log `tests/regression/REGRESSION_LOG.md`.
 * **Max 10 Retries Limit:** The agent works autonomously to repeat fixing and re-testing until all issues are solved, up to a **maximum of 10 retry-fix attempts**. If the problem persists after 10 attempts, it immediately stops to ask the user.
 
 ### 5. High-Quality UX/UI (UIUX Pro Max Standards)
