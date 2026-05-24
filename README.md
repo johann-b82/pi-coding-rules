@@ -1,37 +1,66 @@
-# Shared Coding Rules & Templates
+# Shared Coding Rules & AI Agent Guidelines
 
-This repository contains shared configurations, skills, and prompt templates for teams using the **Pi Coding Agent (`pi`)**.
+This repository contains shared configurations, guidelines, skills, and prompt templates for engineering teams using the **Pi Coding Agent (`pi`)**. 
+
+It implements a unified **Superpowers & Karpathy-Style AI Coding Approach**, specifically designed to keep AI assistants disciplined, simple, and high-performing.
+
+---
+
+## ⚡ The 5 Core Guiding Principles (Fused Ruleset)
+
+These guidelines are loaded directly into the developer's Pi session context via `.pi/APPEND_SYSTEM.md` to prevent "confident junior dev" mistakes:
+
+### 1. Think Before Coding
+* **No Silent Assumptions:** The agent list assumptions explicitly and asks for clarification if anything is 1% ambiguous—no guessing.
+* **Frappe Framework & ERPNext Guard:** For every new project, the agent always prompts you to ask if you want to use the **Frappe Framework** and/or **ERPNext** as the foundational architectural architecture.
+* **Propose Simplicity:** The agent must suggest simpler, faster design strategies before starting file modifications.
+
+### 2. Simplicity First
+* **Minimal Scope:** The agent writes the minimum code necessary to solve the immediate request. No speculative features, unneeded options, or premature abstraction classes.
+* **Docker & Docker Compose Target:** Proposes deployments targeted entirely to containers via **Docker with Docker Compose**, utilizing **local directories on the host (bind mounts) instead of named volumes** for absolute portability.
+
+### 3. Surgical Changes
+* **Orthogonal Guardrails:** The agent touches only what is necessary to complete the task.
+* **Zero Drive-By Refactoring:** It does not change adjacent formatting, documentations, quote systems, or styles. It matches your exact style even if it would suggest doing it differently.
+* **No Unasked Deletions:** Dead code found adjacent to the work area is pointed out in text, but left untouched unless explicitly requested.
+
+### 4. Goal-Driven Execution
+* **Declarative Loops:** No blindly typing commands. It translates instructions into measurable success criteria (e.g., reproduce a bug in a test $\rightarrow$ apply surgical fix $\rightarrow$ pass the test $\rightarrow$ confirm no build/test regressions).
+
+### 5. High-Quality UX/UI (UIUX Pro Max Standards)
+* **No Emojis as Icons:** Always uses high-quality SVGs (Heroicons, Lucide, or platform vectors)—never raw emojis.
+* **Touch & Click Target Hygiene:** Mapped sizes $\ge 44 \times 44 \text{ px}$ with $\ge 8\text{px}$ gaps for touch surfaces, and ensures `cursor-pointer` on all clickable web-elements.
+* **Accessibility (WCAG AA):** $4.5:1$ text contrast ratio, visible focus rings, aria-labels for abstract buttons, and respect systems preferences (e.g. scale & reduced motion).
+* **Prevent Layout Shift (CLS):** Forces explicit aspect-ratio/sizes on images and utilizes skeleton frames/shimming for async data loading to keep CLS $< 0.1$.
+
+---
 
 ## 📦 What's Included
 
-* **`/skill:coding-standards`**: Guidelines on code quality, testing requirements, security best practices, and documentation.
-* **`/review`**: Standardised, thorough code reviewer command that audits correctness, performance, security, and DRY principles.
+* **`.pi/APPEND_SYSTEM.md`**: Fused Superpowers & Karpathy Coding Rules + Frappe & Docker Compose Standards + UI/UX Pro Max Principles.
+* **`/skill:coding-standards`**: Detailed guidelines on code quality, testing requirements, security practices, and self-documenting code.
+* **`/review`**: Standardized, thorough code reviewer command focusing on Core Logic, Performance, Security (OWASP Top 10), and DRY.
 
 ---
 
 ## 🚀 How to Install
 
-Your team members can easily install these shared rules directly inside their Pi agent.
+Your team members can easily adopt these shared guidelines inside their Pi sessions.
 
 ### Option 1: Global Installation (All Projects)
-Add the git repository to the global `settings.json`:
+Add the git repository to your global `settings.json` so every coding workspace inherits these guidelines automatically:
 
 ```bash
 pi install git:github.com/johann-b82/pi-coding-rules.git
 ```
 
+This will also automatically apply the combined guidelines globally.
+
 ### Option 2: Project-specific Installation
-If you only want this applied to a specific project repository, run this command in the root of your project directory:
+Execute this command at the root of a specific project repository to enforce these team guidelines:
 
 ```bash
 pi install -l git:github.com/johann-b82/pi-coding-rules.git
 ```
-This adds the package to `.pi/settings.json`, which you can commit to your project git repository so that any team member has these rules loaded automatically.
 
----
-
-## 🛠 Usage
-
-1. Type `/review` in the Pi prompt to run the structured review command.
-2. The agent automatically has access to `/skill:coding-standards` to answer any questions inline with formatting, testing, and security guides.
-# pi-coding-rules
+This writes the package reference to `.pi/settings.json`. Commit `.pi/settings.json` alongside your `.pi/APPEND_SYSTEM.md` to git, so every team member running `pi` in the project gets the team's rules loaded perfectly on startup!
