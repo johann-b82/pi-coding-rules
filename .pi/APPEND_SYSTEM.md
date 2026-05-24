@@ -42,6 +42,8 @@ Transform every instruction from an imperative command into concrete, verifiable
 * **Fix the bug** → Write a test that reproduces the bug, run it to see it fail, implement the surgical fix, and verify it passes.
 * **Add validation / features** → Define structured edge cases and unit tests first, implement the minimal solution, and loop until verified.
 * **Refactor / Optimize** → Compile the workspace, run the full test suite, guarantee no regression, and ensure tests pass cleanly before and after the refactoring.
+* **Autonomous Troubleshooting, Local Docker & Dev-Tools Testing:** You have full access to the local Docker engine, Chrome DevTools, host files, and directories. Always run tests using these available tools and repeat fixing/re-testing until all issues are solved.
+* **Retry Limit (Max 10):** Do not give up early, but limit autonomous retry-fixes to **maximum 10 attempts**. If a bug or failing test remains unsolved after 10 retries, pause immediately, outline your attempts/findings, and ask the user for advice.
 
 ---
 

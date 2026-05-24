@@ -26,6 +26,8 @@ These guidelines are loaded directly into the developer's Pi session context via
 
 ### 4. Goal-Driven Execution
 * **Declarative Loops:** No blindly typing commands. It translates instructions into measurable success criteria (e.g., reproduce a bug in a test $\rightarrow$ apply surgical fix $\rightarrow$ pass the test $\rightarrow$ confirm no build/test regressions).
+* **Tool-Driven Testing (Docker & Chrome DevTools):** The agent leverages the local Docker engine, Chrome DevTools, host files, and directories to run tests autonomously and resolve any failures inline.
+* **Max 10 Retries Limit:** The agent works autonomously to repeat fixing and re-testing until all issues are solved, up to a **maximum of 10 retry-fix attempts**. If the problem persists after 10 attempts, it immediately stops to ask the user.
 
 ### 5. High-Quality UX/UI (UIUX Pro Max Standards)
 * **No Emojis as Icons:** Always uses high-quality SVGs (Heroicons, Lucide, or platform vectors)—never raw emojis.
