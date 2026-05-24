@@ -18,7 +18,7 @@ Before implementing any code:
 ## Principle 2: Simplicity First
 > **Write the minimum code that solves the exact problem. Nothing speculative.**
 
-* **Docker & Docker Compose Target:** When proposing or creating deployments, always target containerization using Docker with Docker Compose as the standard environment, aligning exactly with Frappe/ERPNext container standards when applicable.
+* **Docker & Docker Compose Target:** When proposing or creating deployments, always target containerization using Docker with Docker Compose as the standard environment, aligning exactly with Frappe/ERPNext container standards when applicable. Always use local directories on the host (bind mounts) for data persistence instead of named docker volumes.
 * **No speculative features:** Do not implement features, utility flags, or options beyond exactly what was requested.
 * **No premature abstractions:** Do not introduce patterns, builders, configuration layers, or classes for single-use code.
 * **Keep it concise:** If a 200-line implementation can be accomplished cleanly in 50 lines, write the 50-line version.
