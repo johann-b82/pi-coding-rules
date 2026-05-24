@@ -1,0 +1,14 @@
+{
+  "name": "@johann-b82/pi-coding-rules",
+  "version": "1.0.0",
+  "description": "Shared AI Coding Agent rules, skills, and prompt templates for teams",
+  "keywords": [
+    "pi-package"
+  ],
+  "author": "johann-b82",
+  "license": "MIT",
+  "pi": {
+    "skills": ["skills/**"],
+    "prompts": ["prompts/**"]
+  }
+}
