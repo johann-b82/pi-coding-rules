@@ -34,3 +34,4 @@ This adds the package to `.pi/settings.json`, which you can commit to your proje
 
 1. Type `/review` in the Pi prompt to run the structured review command.
 2. The agent automatically has access to `/skill:coding-standards` to answer any questions inline with formatting, testing, and security guides.
+# pi-coding-rules
