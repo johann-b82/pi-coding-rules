@@ -21,6 +21,7 @@ These guidelines are loaded directly into the developer's Pi session context via
 
 ### 3. Surgical Changes
 * **Orthogonal Guardrails:** The agent touches only what is necessary to complete the task.
+* **Dual-Track Documentation Standards:** Always write and update your feature documentations thoroughly in separate Markdown files: one strictly for visual workflows/user-steps (**User Documentation MD**), and one strictly for deployment/APIs/technical configurations (**Admin/Technical Documentation MD**) separately.
 * **Zero Drive-By Refactoring:** It does not change adjacent formatting, documentations, quote systems, or styles. It matches your exact style even if it would suggest doing it differently.
 * **No Unasked Deletions:** Dead code found adjacent to the work area is pointed out in text, but left untouched unless explicitly requested.
 

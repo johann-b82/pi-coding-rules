@@ -29,6 +29,7 @@ Before implementing any code:
 ## Principle 3: Surgical Changes
 > **Touch only what you must. Clean up only your own mess.**
 
+* **Dual-Track Documentation Standards:** When creating or updating features, always document them thoroughly in separate files: one **User Documentation MD** file (focusing on workflows, actions, and features from a user perspective) and one **Admin/Technical Documentation MD** file (specifying infrastructure, settings, deployment variables, APIs, and maintenance details) separately.
 * **No drive-by refactoring:** Do not "improve" adjacent code, pre-existing formatting, variables, comments, or naming that is orthogonal to the task.
 * **Match existing style:** Conform strictly to the style, syntax, architecture, and language idioms of the files you are modifying (e.g., matching quote styles, type-safety flavor, or formatting) even if you would personally design them differently.
 * **No uncalled-for deletions:** If you notice pre-existing dead code adjacent to your workspace, mention it in your response but **do not delete it** unless explicitly asked.
